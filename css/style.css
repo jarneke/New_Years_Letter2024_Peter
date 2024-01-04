@@ -7,6 +7,10 @@
   font-family: "GreatVibes";
   src: url(../assets/fonts/Great_Vibes/GreatVibes-Regular.ttf);
 }
+@font-face {
+  font-family: "IndieFlower";
+  src: url(../assets/fonts/Indie_flower/IndieFlower-Regular.ttf);
+}
 body {
   height: 100vh;
   display: grid;
@@ -35,9 +39,13 @@ main {
   gap: 10rem;
 }
 h1 {
-  font-family: "GreatVibes";
+  font-family: "GreatVibes", Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 3.5rem;
+}
+p {
+  font-size: 1.5rem;
+  font-family: "IndieFlower", Arial, Helvetica, sans-serif;
 }
 .slide1,
 .slide3,
