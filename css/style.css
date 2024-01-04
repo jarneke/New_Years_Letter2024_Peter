@@ -24,7 +24,7 @@ footer {
 }
 main {
   padding: 1rem;
-  background-color: green;
+  background-color: var(--col3);
   height: auto;
   margin-top: 10vh;
   margin-bottom: 10vh;
