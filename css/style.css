@@ -2,6 +2,7 @@
   --col1: #2e95cc;
   --col2: #ffffff;
   --col3: #cccccc;
+  --col4: #22222299;
 }
 @font-face {
   font-family: "GreatVibes";
@@ -12,8 +13,10 @@
   src: url(../assets/fonts/Indie_flower/IndieFlower-Regular.ttf);
 }
 body {
-  height: 100vh;
   display: grid;
+}
+header {
+  z-index: 1000;
 }
 header,
 footer {
@@ -27,8 +30,8 @@ footer {
   top: 90vh;
 }
 main {
-  padding: 1rem;
-  background-color: var(--col3);
+  padding: 10rem 1rem;
+  background-color: var(--col2);
   height: auto;
   margin-top: 10vh;
   margin-bottom: 10vh;
@@ -45,16 +48,32 @@ h1 {
 }
 p {
   font-size: 1.5rem;
+  line-height: 2.2rem;
   font-family: "IndieFlower", Arial, Helvetica, sans-serif;
 }
-.slide1,
-.slide3,
-.slide5 {
+figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+figure figcaption {
+  position: absolute;
+  bottom: 0.15rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: var(--col4);
+  color: var(--col2);
+}
+figure img {
+  width: 90%;
+  outline: 10px solid var(--col1);
+  border-radius: 5rem;
+  box-shadow: 1.5rem 1.2rem var(--col4);
+}
+.even {
   transform: translate(-100%);
 }
-.slide2,
-.slide4,
-.slide6 {
+.uneven {
   transform: translate(100%);
 }
 .hidden {
