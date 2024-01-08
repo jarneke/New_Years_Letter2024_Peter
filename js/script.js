@@ -53,6 +53,7 @@ for (const element of elements) {
   })`;
   divB.style.backgroundImage = `url(${
     imageArray[getRandom(imageArray.length)]
-  })`; //rotate top div image
+  })`;
+  //rotate top div image
   divT.classList = "rotated";
 }
