@@ -23,8 +23,8 @@ const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
 const imageArray = [
-  "../assets/Waves/blue-black_small_0.svg",
-  "../assets/Waves/blue-black_small_1.svg",
+  "root/assets/Waves/blue-black_small_0.svg",
+  "root/assets/Waves/blue-black_small_1.svg",
   "../assets/Waves/blue-black_small_2.svg",
   "../assets/Waves/blue-black_small_3.svg",
   "../assets/Waves/blue-black_small_4.svg",
