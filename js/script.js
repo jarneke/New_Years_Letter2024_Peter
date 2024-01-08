@@ -18,26 +18,22 @@ const observer = new IntersectionObserver(
   },
   { rootMargin: `-${vhInPixels / 3}px 0px` }
 );
-
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
-
 const imageArray = [
   "./assets/Waves/blue-black_small_0.svg",
   "./assets/Waves/blue-black_small_1.svg",
   "./assets/Waves/blue-black_small_2.svg",
-  "New_Years_Letter2024_Peter/assets/Waves/blue-black_small_3.svg",
-  "New_Years_Letter2024_Peter/assets/Waves/blue-black_small_4.svg",
-  "New_Years_Letter2024_Peter/assets/Waves/blue-black_small_5.svg",
+  "./assets/Waves/blue-black_small_3.svg",
+  "./assets/Waves/blue-black_small_4.svg",
+  "./assets/Waves/blue-black_small_5.svg",
 ];
 const elements = document.getElementsByClassName("divider-small");
-console.log(elements);
 for (const element of elements) {
   // Get elements to fill parent element with
   const divT = document.createElement("div");
   const divB = document.createElement("div");
   const pElement = element.firstElementChild;
-
   //clear parent element
   while (element.firstChild != null) {
     element.removeChild(element.firstChild);
@@ -46,7 +42,6 @@ for (const element of elements) {
   element.appendChild(divT);
   element.appendChild(pElement);
   element.appendChild(divB);
-
   //give random image to div
   divT.style.backgroundImage = `url(${
     imageArray[getRandom(imageArray.length)]
