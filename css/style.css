@@ -1,7 +1,10 @@
 :root {
   --colMain: #2e95cc;
+  --colMain1: #216e97;
+  --colMain2: #164a65;
   --colBg: #111111;
   --colText: #ffffff;
+  --colGlow: #ffffff;
 }
 @font-face {
   font-family: "GreatVibes";
@@ -11,11 +14,18 @@
   font-family: "IndieFlower";
   src: url(../assets/fonts/Indie_flower/IndieFlower-Regular.ttf);
 }
-.divider {
-  height: 250px;
+.divider-small > div {
+  height: 100px;
   background-color: red;
   overflow-x: hidden;
-  background-image: url(../assets/Waves/blue-black_t-b.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.divider {
+  height: 252px;
+  overflow-x: hidden;
+  background-image: url(../assets/Waves/blue-black.svg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,17 +33,21 @@
 .rotated {
   transform: rotate(180deg);
 }
-
 .hidden {
   opacity: 0;
-  filter: blur(5px);
-  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+  filter: blur(5rem);
+  transition: all 1s ease-in-out;
   transform: translate(-100%);
 }
 .show {
+  border-radius: 0;
   opacity: 1;
   filter: blur(0);
   transform: translate(0);
+}
+.colMain {
+  background-color: var(--colMain);
 }
 html {
   color-scheme: dark light;
@@ -44,33 +58,34 @@ body {
 }
 header,
 footer {
+  font-family: "GreatVibes", Arial, Helvetica, sans-serif;
+  text-align: center;
   background-color: var(--colMain);
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
 }
 main {
-  padding: 2rem 0;
+  padding: 10rem 0;
   background-color: var(--colBg);
   height: auto;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 5rem;
 }
 h1 {
-  font-family: "GreatVibes", Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 3.5rem;
   color: var(--colText);
+  font-weight: bold;
 }
 p {
+  padding: 0.5rem 2rem;
   font-size: 1.5rem;
   line-height: 2.2rem;
   font-family: "IndieFlower", Arial, Helvetica, sans-serif;
   color: var(--colText);
 }
-section {
-  outline: 5px solid lime;
+section > p {
+  background-color: var(--colMain);
 }
